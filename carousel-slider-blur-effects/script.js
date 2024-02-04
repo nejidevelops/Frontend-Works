@@ -12,6 +12,8 @@ prevButton.onclick = function() {
   showSlider('prev');
 }
 
+let unAcceptClick;
+
 const showSlider = (type) => {
   nextButton.style.pointerEvents = 'none';
   prevButton.style.pointerEvents = 'none';
@@ -26,4 +28,11 @@ const showSlider = (type) => {
     listHTML.prepend(items[positionLast]);
     carousel.classList.add('prev');
   }
+
+  clearTimeout(unAcceptClick);
+
+  unAcceptClick = setTimeout(() => {
+    nextButton.style.pointerEvents = 'auto';
+    prevButton.style.pointerEvents = 'auto';
+  }, 2000)
 }
