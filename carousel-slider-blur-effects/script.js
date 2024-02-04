@@ -13,6 +13,9 @@ prevButton.onclick = function() {
 }
 
 const showSlider = (type) => {
+  nextButton.style.pointerEvents = 'none';
+  prevButton.style.pointerEvents = 'none';
+
   carousel.classList.remove('prev', 'next')
   let items = document.querySelectorAll('.carousel .list .item');
   if(type === 'next') {
