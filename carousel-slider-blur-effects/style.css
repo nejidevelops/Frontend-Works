@@ -24,6 +24,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 header .logo {
@@ -32,4 +34,50 @@ header .logo {
 
 header nav a {
   margin-left: 30px;
+}
+
+.carousel {
+  margin-top: -50px;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .list {
+  position: absolute;
+  top: 0;
+  width: 1140px;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80%;
+}
+
+.carousel .list .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  font-size: 15px;
+}
+
+.carousel .list .item img {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .list .item .detail {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel .list .item .intro {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50);
+  width: 400px;
 }
