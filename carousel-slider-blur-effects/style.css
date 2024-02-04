@@ -80,4 +80,54 @@ header nav a {
   top: 50%;
   transform: translateY(-50);
   width: 400px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel .list .item:nth-child(2) .intro {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s;
+}
+
+.carousel .list .item:nth-child(n + 6) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel .list .item:nth-child(2) {
+  transform: translate(0, 0);
+  filter: blur(0);
+  z-index: 10;
+  opacity: 1;
+}
+
+.carousel .list .item:nth-child(1) {
+  transform: translate(-100%, -5%) scale(1.5);
+  filter: blur(30px);
+  z-index: 11;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel .list .item:nth-child(3) {
+  transform: translate(50%, 10%) scale(0.8);
+  filter: blur(10px);
+  z-index: 9;
+  opacity: 1;
+}
+
+.carousel .list .item:nth-child(4) {
+  transform: translate(90%, 20%) scale(0.5);
+  filter: blur(30px);
+  opacity: 1;
+  z-index: 8;
+}
+
+.carousel .list .item:nth-child(5) {
+  transform: translate(120%, 30%) scale(0.3);
+  filter: blur(40px);
+  opacity: 0;
+  z-index: 7;
+  pointer-events: none;
 }
