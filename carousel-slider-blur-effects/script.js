@@ -13,9 +13,14 @@ prevButton.onclick = function() {
 }
 
 const showSlider = (type) => {
+  carousel.classList.remove('prev', 'next')
   let items = document.querySelectorAll('.carousel .list .item');
   if(type === 'next') {
     listHTML.appendChild(items[0]);
     carousel.classList.add('next');
+  } else {
+    let positionLast = items.length - 1;
+    listHTML.prepend(items[positionLast]);
+    carousel.classList.add('prev');
   }
 }
