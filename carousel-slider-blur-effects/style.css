@@ -291,9 +291,9 @@ header nav a {
 }
 
 .carousel.prev .list .item:nth-child(4) {
-  animation: positionItem2 0.9s ease-in-out 1 forwards;
+  animation: positionItem3 0.9s ease-in-out 1 forwards;
 }
 
 .carousel.prev .list .item:nth-child(5) {
-  animation: positionItem2 1.1s ease-in-out 1 forwards;
+  animation: positionItem4 1.1s ease-in-out 1 forwards;
 }
