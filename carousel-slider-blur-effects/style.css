@@ -131,3 +131,37 @@ header nav a {
   z-index: 7;
   pointer-events: none;
 }
+
+.arrows {
+  position: absolute;
+  bottom: 10px;
+  width: 1140px;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrows #next,
+.arrows #prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-family: monospace;
+  font-size: large;
+  font-weight: bold;
+  border: 1px solid #555;
+}
+
+.arrows #back {
+  font-family: Poppins;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1px solid #555;
+  letter-spacing: 3px;
+  background-color: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
