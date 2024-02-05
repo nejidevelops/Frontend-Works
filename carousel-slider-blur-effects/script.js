@@ -36,3 +36,9 @@ const showSlider = (type) => {
     prevButton.style.pointerEvents = 'auto';
   }, 2000)
 }
+
+seeMoreButton.forEach(button => {
+  button.onclick = () => {
+    carousel.classList.add('showDetail');
+  }
+})
