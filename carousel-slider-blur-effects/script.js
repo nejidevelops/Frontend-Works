@@ -3,6 +3,7 @@ let prevButton = document.getElementById('prev');
 let seeMoreButton = document.querySelectorAll('.seeMore');
 let carousel = document.querySelector('.carousel');
 let listHTML = document.querySelector('.carousel .list');
+let backButton = document.getElementById('back');
 
 nextButton.onclick = function() {
   showSlider('next');
@@ -42,3 +43,7 @@ seeMoreButton.forEach(button => {
     carousel.classList.add('showDetail');
   }
 })
+
+backButton.onclick = () => {
+  carousel.classList.remove('showDetail');
+}
