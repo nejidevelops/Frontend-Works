@@ -368,5 +368,58 @@ header nav a {
 }
 
 .carousel.showDetail .list .item .detail .checkout button:nth-child(2) {
+  background-color: #693eff;
+  color: #eee;
+}
 
+.carousel.showDetail .list .item:nth-child(2) .detail .title,
+.carousel.showDetail .list .item:nth-child(2) .detail .des,
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications,
+.carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+  opacity: 0;
+  animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+
+.carousel.showDetail .list .item:nth-child(2) .detail .des {
+  animation-delay: 1.2s;
+}
+
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications {
+  animation-delay: 1.4s;
+}
+
+.carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+  animation-delay: 1.6s;
+}
+
+.carousel.showDetail #next,
+.carousel.showDetail #back {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel.showDetail #back {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel::before {
+  width: 500px;
+  height: 300px;
+  content: '';
+  background-image: linear-gradient(
+    45deg, #dc422a, blue
+  );
+  position: absolute;
+  z-index: -1;
+  border-radius: 20% 30% 80% 10%;
+  filter: blur(150px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%);
+  transition: 1s;
+}
+
+.carousel.showDetail::before {
+  transform: translate(-100%, -50%) rotate(70deg);
 }
