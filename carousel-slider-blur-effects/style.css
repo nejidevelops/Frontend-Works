@@ -423,3 +423,13 @@ header nav a {
 .carousel.showDetail::before {
   transform: translate(-100%, -50%) rotate(70deg);
 }
+
+@media screen and (max-width: 991px) {
+  .carousel .list .item {
+    width: 90%;
+  }
+
+  .carousel .list .detail .specifications {
+    overflow: auto;
+  }
+}
