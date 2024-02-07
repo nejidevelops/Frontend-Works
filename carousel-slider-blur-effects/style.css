@@ -433,3 +433,42 @@ header nav a {
     overflow: auto;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .carousel .list .item {
+    width: 100%;
+    font-size: 10px;
+  }
+  
+  .carousel {
+    height: 600px;
+  }
+
+  .carousel .list {
+    height: 100%;
+  }
+
+  .carousel .list .item .intro {
+    width: 50%;
+  }
+
+  .carousel .list .item img {
+    width: 40%;
+  }
+
+  .carousel.showDetail .list .item .detail .title {
+    font-size: 2em;
+  }
+
+  .carousel.showDetail .list .item .detail .des {
+    height: 100px;
+    overflow: auto;
+  }
+
+  .carousel.showDetail .list .item .detail .checkout {
+    display: flex;
+    width: max-content;
+    float: right;
+    
+  }
+}
